@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FlyMoon</title>
+
+</head>
+
+<body class="body">
+
+    <div class="header">
+
+        <h1>Flight Logger Assistant-WEB</h1>
+
+    </div>
+
+    <div class="set1">
+
+        <p><a href="#">About us</a></p>
+
+    </div>
+
+    <div class="set2">
+
+        <p class="seta"><a href="#">Discord</a></p>
+
+    </div>
+
+    <div class="intro">
+
+        <p class="bruh">Welcome to FlyMoon Virtual Airlines, where the sky is not the limit! Our airline offers a unique
+
+            and exciting experience for aviation enthusiasts and those who love to travel. As a member of our community,
+
+            you will have access to a wide range of destinations, from exotic locations to popular tourist spots, all from
+
+            the comfort of your own home. Our passionate team of pilots and staff is committed to providing you with a
+
+            first-class experience, with personalized service and attention to detail at every step of your journey. So
+
+            what are you waiting for? Join FlyMoon Virtual Airlines today and let your dreams take flight!</p>
+
+    </div>
+
+    <div class="container">
+
+        <div class="flightlogger">
+
+            <h1>Flight Logger</h1><br>
+
+            <form action="#" method="post" id="flightForm">
+
+                <p>
+
+                    <label for="callsign">Pilot Call Sign:</label>
+
+                    <input type="text" id="callsign" name="callsign">
+
+                </p>
+
+                <p>
+
+                    <label for="route">Flight Route:</label>
+
+                    <input type="text" id="route" name="route">
+
+                </p>
+
+                <div class="submit">
+
+                    <input type="submit" value="Add Flight">
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <div class="ad">
+
+        <p></p>
+
+    </div>
+
+    <div class="logOutput">
+
+        <p>```Your Log Info:```</p>
+
+    </div>
+
+    <style>
+
+        /* Your CSS styles here */
+
+    </style>
+
+    <script>
+
+        
+
+            
+            
+
+            
+
+           
+
+        var callsign = document.getElementById('callsign').value;
+
+var route = document.getElementById('route').value;
+
+var logOutput = document.getElementById('logOutput');
+
+function checkRoute() {
+
+    if (route === "FYM0001") {
+
+        logOutput.textContent = "Pilot callsign: " + callsign + "\nRoute: Zurich to Naples\nTotal time taken: 1 hour 40 minutes (approximate)";
+
+    } else {
+
+        logOutput.textContent = "Invalid route or callsign";
+
+    }
+
+}
+
+document.getElementById('flightForm').addEventListener('submit', function(event) {
+
+    event.preventDefault(); // Prevent form submission
+
+    checkRoute();
+
+    document.getElementById('callsign').value = ''; // Clear the callsign input
+
+    document.getElementById('route').value = ''; // Clear the route input
+
+});
+
+    </script>
+
+</body>
+
+</html>
+
