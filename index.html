@@ -72,7 +72,7 @@
 
   <div class="65656">
 
-    <p id="logOutput">Your Log Info</p>
+    <p id="logOutput">```Your Log Info:```</p>
 
   </div>  
 
@@ -253,10 +253,13 @@
 
     if (route === "FYM0001") {
 
-      logOutput.textContent = "Pilot callsign was " + callsign + ". Route is Zurich to Naples. Total time taken is approximately 1 hour 40 minutes.";
+      logOutput.textContent = "```•Pilot callsign was• " + callsign + "•```" ". ```•Route : Zurich to Naples.•```• ```•Total time taken : approximately 1 hour 40 minutes.•```";
 
     }
+      if (route === "FYM0002") {
 
+      logOutput.textContent = "```•Pilot callsign :```"+callsign+"```" "```•Route : Jeju to Seoul•```•```•Total time taken:approximately 1 hour 10 minutes•```"
+    }
   });
 
 });
