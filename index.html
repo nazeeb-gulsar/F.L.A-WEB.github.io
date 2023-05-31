@@ -74,6 +74,7 @@
       <p> If you want a website for your airline or business purpose contact Moonpet786#0248 in discord  </p>
 
     <p id="logOutput">```Log Info```</p>
+      <p>V/|\1</p>
 
   </div>  
 
@@ -234,7 +235,8 @@
     </style>
 
     <script>
-document.addEventListener('DOMContentLoaded', function() {
+
+      document.addEventListener('DOMContentLoaded', function() {
 
   var form = document.querySelector('form');
 
@@ -254,12 +256,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (route === "FYM0001") {
 
-      logOutput.textContent = "```Pilot callsign was " + callsign +  ". Route is Zurich to Naples. ₩  Total time taken is approximately 1 hour 40 minutes.";
+      logOutput.textContent = "```Pilot callsign was " + callsign +  ". Route is Zurich to Naples. ₩  Total time taken is approximately 1 hour 40 minutes.```";
 
     }
-   if (route === "FYM0002") {
-    logOutput.textContent = "```Pilot callsign:```"  + callsign + " Route is Jeju to Zeoul.  Total time taken is approximately 1 hour 11 minutes.";
-   }
+
+    if (route === "FYM0002") {
+
+      logOutput.textContent = "```Pilot callsign: "  + callsign + " Route is Jeju to Seoul. Total time taken is approximately 1 hour 11 minutes.```";
+
+    }
 
   });
 
