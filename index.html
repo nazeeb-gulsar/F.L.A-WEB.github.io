@@ -233,25 +233,44 @@
     </style>
 
     <script>
-      var callsign = document.getElementById('callsign').value;
+document.addEventListener('DOMContentLoaded', function() {
 
-  var routes = document.getElementById('route').value;
+  var form = document.querySelector('form');
 
-  var logOutput = document.getElementById('logOutput').value;
+  form.addEventListener('submit', function(event) {
 
-  function route(true){
+    event.preventDefault(); // Prevent the form from submitting and refreshing the page
 
-    if (var route = "FYM0001") {
+    
 
-        
+    var callsign = document.getElementById('callsign').value;
 
-       logOutput.textContent = "pilot callsign was "+ callsign +"Route is Zurich To Naples total time taken is 1 hour 40 mins aproximate"; 
+    var route = document.getElementById('route').value;
+
+    var logOutput = document.getElementById('logOutput');
+
+    
+
+    if (route === "FYM0001") {
+
+      logOutput.textContent = "Pilot callsign was " + callsign + ". Route is Zurich to Naples. Total time taken is approximately 1 hour 40 minutes.";
 
     }
 
+  });
+
+});
+
+
+
+        
+
+       
+    
+
    
 
-  }
+  
 
     </script>
   </html>
